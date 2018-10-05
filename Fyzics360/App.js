@@ -5,9 +5,11 @@ import Homepage from './section/Homepage';
 export default class App extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
+      <View>
         <Homepage />
+        <View style={styles.container}>
         <Text>Open up App.js to start working on your app!</Text>
+        </View>
       </View>
     );
   }
