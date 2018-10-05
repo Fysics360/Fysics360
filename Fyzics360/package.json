@@ -9,9 +9,18 @@
     "eject": "expo eject"
   },
   "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
     "expo": "^30.0.1",
+    "express": "^4.16.3",
+    "morgan": "^1.9.1",
+    "pg": "^7.5.0",
+    "pg-hstore": "^2.3.2",
     "react": "16.3.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-30.0.0.tar.gz",
-    "react-native-elements": "^0.19.1"
+    "react-native-elements": "^0.19.1",
+    "redux": "^4.0.0",
+    "sequelize": "^4.39.0",
+    "sequelize-cli": "^4.1.1"
   }
 }
