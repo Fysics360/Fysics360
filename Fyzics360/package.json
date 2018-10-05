@@ -1,12 +1,14 @@
 {
-  "name": "empty-project-template",
+  "name": "Fyzics360",
   "main": "node_modules/expo/AppEntry.js",
   "private": true,
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "eject": "expo eject"
+    "eject": "expo eject",
+    "server": "nodemon ./server/index.js",
+    "seed": "node seed.js"
   },
   "dependencies": {
     "axios": "^0.18.0",
