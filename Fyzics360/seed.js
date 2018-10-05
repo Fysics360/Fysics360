@@ -1,6 +1,5 @@
 const db = require('./server/db')
 const User = require('./server/model')
-console.log("IN THE SEED FILE", db)
 
 const seed = async () => {
   try {
