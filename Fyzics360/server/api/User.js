@@ -13,4 +13,12 @@ router.get('/', async (req, res, next) => {
     next(error)
   }
 });
+
+// router.get('/me', async (req, res, next) => {
+//   try{
+//     if()
+//   }catch(error){
+//     console.error(error) 
+//   }
+// });
 module.exports = router;
