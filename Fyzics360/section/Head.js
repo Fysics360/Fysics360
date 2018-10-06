@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Header } from 'react-native-elements';
 
-class Header extends Component {
+class Head extends Component {
   render() {
     return (
       <Header
@@ -14,4 +14,4 @@ class Header extends Component {
   }
 }
 
-export default Header;
+export default Head;
