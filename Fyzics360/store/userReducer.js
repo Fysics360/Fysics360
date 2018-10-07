@@ -11,13 +11,13 @@ const GetUser = (user) => ({
   user
 })
 
-//THUNK CREATORS 
+//THUNK CREATORS
 const path = 'http://localhost:3000/api/users'
 const retrieveUser = () => async dispatch => {
   try {
     const res = axios.get(path)
     const users = res.data
-    dispatgch(GetUser(users))
+    dispatch(GetUser(users))
   } catch (error) {
     console.error(error)
   }
