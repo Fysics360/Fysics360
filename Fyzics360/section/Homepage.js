@@ -5,6 +5,11 @@ class HomePage extends Component {
   onPress = () => {
     Alert.alert('You clicked me');
   };
+
+  onSignupPress = () => {
+    this.props.navigation.navigate('Signup');
+  };
+
   render() {
     return (
       <View style={styles.container}>
@@ -14,7 +19,10 @@ class HomePage extends Component {
           </TouchableOpacity>
         </View>
         <View style={styles.buttonRow}>
-          <TouchableOpacity style={styles.buttonStyles}>
+          <TouchableOpacity
+            style={styles.buttonStyles}
+            onPress={this.onSignupPress}
+          >
             <Text style={styles.buttonText}>SignUp</Text>
           </TouchableOpacity>
         </View>

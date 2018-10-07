@@ -4,11 +4,15 @@ import store from './store';
 import { createStackNavigator } from 'react-navigation';
 // import Head from './section/Head';
 import HomePage from './section/Homepage';
+import SignUpPage from './section/SignupPage';
 
 const MyRoutes = createStackNavigator(
   {
     HomeRT: {
       screen: HomePage,
+    },
+    Signup: {
+      screen: SignUpPage,
     },
   },
   {
