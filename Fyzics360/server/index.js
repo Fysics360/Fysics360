@@ -14,6 +14,7 @@ app.use(bodyparser.json())
 app.use(bodyparser.urlencoded({ extended: true }))
 
 app.use('/api', require('./api'))
+app.use('/auth', require('./auth'))
 
 app.use((req, res, next) => {
   path.extname(req.path).length > 0 ?
