@@ -15,7 +15,14 @@ class SignupPage extends Component {
   render() {
     return (
       <View>
-        <Text>Hello Signup!</Text>
+        <FormLabel>Name</FormLabel>
+        <FormInput />
+        <FormLabel>Email</FormLabel>
+        <FormInput />
+        <FormLabel>Password</FormLabel>
+        <FormInput />
+        <FormLabel>Confirm Password</FormLabel>
+        <FormInput />
       </View>
     );
   }
