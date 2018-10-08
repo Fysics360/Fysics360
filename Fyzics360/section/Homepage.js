@@ -11,6 +11,7 @@ class HomePage extends Component {
   };
 
   render() {
+    console.log('In the homepage');
     return (
       <View style={styles.container}>
         <View style={styles.buttonRow}>
