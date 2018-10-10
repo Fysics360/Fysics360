@@ -2,9 +2,10 @@ import React from 'react';
 import { Provider } from 'react-redux';
 import store from './store';
 import { createStackNavigator } from 'react-navigation';
-// import Head from './section/Head';
+import Head from './section/Head';
 import HomePage from './section/Homepage';
 import SignUpPage from './section/SignupPage';
+import LoginPage from './section/LoginPage';
 
 const MyRoutes = createStackNavigator(
   {
@@ -17,6 +18,12 @@ const MyRoutes = createStackNavigator(
   },
   {
     initialRouteName: 'HomeRT',
+    navigationOptions: {
+      header: props => <Head {...props} />,
+      headerStyle: {
+        backgroundColor: 'transparent',
+      },
+    },
   }
 );
 
