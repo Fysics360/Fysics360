@@ -6,6 +6,7 @@ import Head from './section/Head';
 import HomePage from './section/Homepage';
 import SignUpPage from './section/SignupPage';
 import LoginPage from './section/LoginPage';
+import UserHome from './section/UserHome';
 
 const MyRoutes = createStackNavigator(
   {
@@ -14,6 +15,12 @@ const MyRoutes = createStackNavigator(
     },
     Signup: {
       screen: SignUpPage,
+    },
+    Login: {
+      screen: LoginPage,
+    },
+    UserHome: {
+      screen: UserHome,
     },
   },
   {

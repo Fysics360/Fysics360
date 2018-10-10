@@ -8,17 +8,22 @@ const GET_USER = 'GET_USER';
 
 const getUser = user => ({ type: GET_USER, user });
 
-// export const login = formData => dispatch => {
-//   return axios
-//     .put('/auth/login', formData)
-//     .then(res => res.data)
-//     .then(user => dispatch(gotMe(user)))
-//     .catch(err => console.log(err));
-// };
+const path = `http://localhost:3000/auth`;
+
+export const login = formData => async dispatch => {
+  try {
+    const res = await axios.post(`${path}/login`, formData);
+    const data = res.data;
+    dispatch(getUser(data));
+    console.log('In the loggin store', data);
+  } catch (error) {
+    console.log(error);
+  }
+};
 
 export const auth = (name, email, password, method) => dispatch =>
   axios
-    .post(`http://localhost:3000/auth/${method}`, { name, email, password })
+    .post(`${path}/${method}`, { name, email, password })
     .then(
       res => {
         dispatch(getUser(res.data));
