@@ -7,18 +7,11 @@ router.get('/', async (req, res, next) => {
     const users = await User.findAll({
       attributes: ['name', 'email']
     })
-    console.log('Insied user', users)
+    console.log('inside get users', users)
     res.json(users)
   } catch (error) {
     next(error)
   }
 });
 
-// router.get('/me', async (req, res, next) => {
-//   try{
-//     if()
-//   }catch(error){
-//     console.error(error) 
-//   }
-// });
 module.exports = router;
