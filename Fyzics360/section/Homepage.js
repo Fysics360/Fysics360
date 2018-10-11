@@ -10,12 +10,19 @@ class HomePage extends Component {
     this.props.navigation.navigate('Signup');
   };
 
+  onLoginPress = () => {
+    this.props.navigation.navigate('Login');
+  };
+
   render() {
     console.log('In the homepage');
     return (
       <View style={styles.container}>
         <View style={styles.buttonRow}>
-          <TouchableOpacity style={styles.buttonStyles}>
+          <TouchableOpacity
+            style={styles.buttonStyles}
+            onPress={this.onLoginPress}
+          >
             <Text style={styles.buttonText}>Login</Text>
           </TouchableOpacity>
         </View>

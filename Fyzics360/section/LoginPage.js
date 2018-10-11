@@ -7,27 +7,18 @@ import {
   FormValidationMessage,
   Button,
 } from 'react-native-elements';
-import { auth } from '../store/loginReducer';
+import { login } from '../store/loginReducer';
 
 const mapDispatchToProps = dispatch => {
   return {
-    signup: (userName, userEmail, userPassword, formName) =>
-      dispatch(auth(userName, userEmail, userPassword, formName)),
+    login: userData => dispatch(login(userData)),
   };
 };
 
-const mapStateToProps = state => {
-  return {
-    name: 'login',
-    displayName: 'Login',
-  };
-};
-
-class SignupPage extends Component {
+class LoginPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      name: '',
       email: '',
       password: '',
     };
@@ -35,24 +26,17 @@ class SignupPage extends Component {
   }
 
   handleSubmit = () => {
-    console.log(this.props);
-    let formName = this.props.name;
-    let name = this.state.name;
     let email = this.state.email;
     let password = this.state.password;
-    this.props.signup(name, email, password, formName);
+    this.props.login({ email, password });
+    console.log("I'm loggin man");
+    console.log(email, password);
+    this.props.navigation.navigate('UserHome');
   };
 
   render() {
     return (
       <View>
-        <FormLabel>Name</FormLabel>
-        <FormInput
-          placeholder="Enter your name"
-          value={this.state.name}
-          name="Name"
-          onChangeText={name => this.setState({ name })}
-        />
         <FormLabel>Email</FormLabel>
         <FormInput
           placeholder="Enter your email"
@@ -68,7 +52,7 @@ class SignupPage extends Component {
           onChangeText={password => this.setState({ password })}
         />
         <Button
-          title="SIGNUP"
+          title="LOGIN"
           backgroundColor="#026FFE"
           onPress={this.handleSubmit}
         />
@@ -78,6 +62,6 @@ class SignupPage extends Component {
 }
 
 export default connect(
-  mapStateToProps,
+  null,
   mapDispatchToProps
-)(SignupPage);
+)(LoginPage);
